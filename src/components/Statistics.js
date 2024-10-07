@@ -10,9 +10,9 @@ const Statistics = () => {
         <div className="col-span-4">
           <LineChart /> {/* Add the LineChart component here */}
         </div>
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <img src="/pie-chart.png" alt="Pie Chart" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

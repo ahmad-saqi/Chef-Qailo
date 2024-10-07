@@ -70,8 +70,8 @@ const LineChart = () => {
   };
 
   return (
-    <div className="bg-white px-6 rounded-lg">
-      <div style={{ height: '320px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
+    <div className="bg-white px-6 rounded-lg justify-center items-center">
+      <div style={{ height: '300px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
         <Line data={data} options={options} />
       </div>
     </div>

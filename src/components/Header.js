@@ -22,8 +22,9 @@ const Header = () => {
           <img src={stat.icon} alt={stat.title} className='bg-[#006E681F] p-4 rounded-full' />
           </div>
           <div>
-            <h4 className="text-gray-600">{stat.title}</h4>
-            <p className="text-2xl font-semibold">{stat.value}</p>
+          <p className="text-xl font-semibold font-poppins">{stat.value}</p>
+            <h4 className="text-gray-600 font-normal text-sm font-poppins">{stat.title}</h4>
+          
           </div>
 
          
