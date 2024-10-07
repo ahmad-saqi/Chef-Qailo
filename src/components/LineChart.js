@@ -1,7 +1,7 @@
 // src/components/LineChart.js
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend } from 'chart.js';
 
 // Register chart.js components
 ChartJS.register(
@@ -9,7 +9,6 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend
 );
@@ -17,13 +16,26 @@ ChartJS.register(
 const LineChart = () => {
   // Months with years as labels for the x-axis
   const data = {
-    labels: ['Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023', 'May 2023', 'Jun 2023', 'Jul 2023', 'Aug 2023', 'Sep 2023', 'Oct 2023', 'Nov 2023', 'Dec 2023'],
+    labels: [
+      'Jan 2023',
+      'Feb 2023',
+      'Mar 2023',
+      'Apr 2023',
+      'May 2023',
+      'Jun 2023',
+      'Jul 2023',
+      'Aug 2023',
+      'Sep 2023',
+      'Oct 2023',
+      'Nov 2023',
+      'Dec 2023',
+    ],
     datasets: [
       {
-        label: 'Users',
-        data: [2000, 2500, 3000, 2800, 3300, 3600, 4100, 3900, 4200, 4600, 4800, 5100], // Sample data points for each month
-        borderColor: '#f97316', // Orange line color
-        backgroundColor: 'rgba(249, 115, 22, 0.1)', // Slightly transparent orange area fill
+        label: 'Performance', // Label for the dataset
+        data: [10, 25, 40, 55, 70, 85, 90, 65, 50, 80, 95, 100], // Sample data points (0 to 100)
+        borderColor: '#f97316', // Line color
+        backgroundColor: 'rgba(249, 115, 22, 0.1)', // Fill color under the line
         tension: 0.4, // Curved line
         fill: true, // Fill the area under the line
       },
@@ -34,33 +46,34 @@ const LineChart = () => {
     responsive: true,
     plugins: {
       legend: {
-        display: true,
+        display: false, // Hide the legend
       },
-     
     },
     scales: {
       x: {
         title: {
-          display: true,
-          text: 'Month and Year',
+          display: false, // Hide x-axis title
         },
       },
       y: {
         beginAtZero: true,
+        min: 0, // Set minimum value of y-axis to 0
+        max: 100, // Set maximum value of y-axis to 100
         title: {
-          display: true,
-          text: 'Number of Users',
+          display: false, // Hide y-axis title
         },
         ticks: {
-          stepSize: 1000, // Adjust to control the y-axis intervals
+          stepSize: 10, // Adjust to control the y-axis intervals
         },
       },
     },
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg  mt-6">
-      <Line data={data} options={options} />
+    <div className="bg-white px-6 rounded-lg">
+      <div style={{ height: '320px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
+        <Line data={data} options={options} />
+      </div>
     </div>
   );
 };
