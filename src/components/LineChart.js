@@ -44,6 +44,7 @@ const LineChart = () => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false, // Hide the legend
@@ -71,8 +72,8 @@ const LineChart = () => {
 
   return (
     <div className="bg-white px-6 rounded-lg justify-center items-center">
-      <div style={{ height: '300px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
-        <Line data={data} options={options} />
+      <div style={{ height: '200px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
+        <Line data={data} options={options}  />
       </div>
     </div>
   );
