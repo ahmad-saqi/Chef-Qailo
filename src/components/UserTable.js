@@ -127,6 +127,7 @@ const users = [
   }
 ];
 
+
 const UserTable = () => {
   const [sortConfig, setSortConfig] = useState({
     key: "name",
@@ -157,14 +158,14 @@ const UserTable = () => {
   };
 
   return (
-    <div className="mt-6 flex space-x-8">
-      <div className="w-[75%] bg-white p-6 rounded-xl shadow">
+    <div className="mt-6 flex flex-col lg:flex-row lg:space-x-8">
+      <div className="w-full lg:w-[75%] bg-white p-6 rounded-xl shadow">
         <div style={{ height: "240px" }} className="overflow-y-scroll scrollbar-hide">
           <table className="w-full table-auto p-6">
             <thead className="bg-white sticky top-0 py-6 w-full border-b-2 z-10">
-              <tr className="text-center w-[100%] ">
-                <th className="p-2 text-sm font-normal font-poppins w-[50%]">
-                  <div className="flex items-center cursor-pointer" onClick={() => handleSort("name")}>
+              <tr className="text-center w-[100%]">
+                <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[50%]">
+                  <div className="flex items-center cursor-pointer justify-start" onClick={() => handleSort("name")}>
                     Name
                     {sortConfig.key === "name" &&
                       (sortConfig.direction === "asc" ? (
@@ -174,8 +175,8 @@ const UserTable = () => {
                       ))}
                   </div>
                 </th>
-                <th className="p-2 text-sm font-normal font-poppins w-[25%]">
-                  <div className="flex items-center cursor-pointer" onClick={() => handleSort("email")}>
+                <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[25%]">
+                  <div className="flex items-center cursor-pointer justify-start" onClick={() => handleSort("email")}>
                     Email
                     {sortConfig.key === "email" &&
                       (sortConfig.direction === "asc" ? (
@@ -185,8 +186,8 @@ const UserTable = () => {
                       ))}
                   </div>
                 </th>
-                <th className="p-2 text-sm font-normal font-poppins w-[15%]">
-                  <div className="flex items-center cursor-pointer" onClick={() => handleSort("payment")}>
+                <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[15%]">
+                  <div className="flex items-center cursor-pointer justify-center" onClick={() => handleSort("payment")}>
                     Payment
                     {sortConfig.key === "payment" &&
                       (sortConfig.direction === "asc" ? (
@@ -196,27 +197,29 @@ const UserTable = () => {
                       ))}
                   </div>
                 </th>
-                <th className="w-[10%]"><p></p></th>
+                <th className="w-[10%]">
+                  <p></p>
+                </th>
               </tr>
             </thead>
             <tbody>
               {sortedUsers.slice(0, 10).map((user, index) => (
                 <tr key={index}>
-                  <td className="p-2 flex items-center text-sm font-poppins font-normal w-[100%]">
+                  <td className="p-2 flex items-center text-xs lg:text-sm font-poppins font-normal w-[100%]">
                     <img src={user.image} alt={user.name} className="w-8 h-8 rounded-full mr-2" />
                     {user.name}
                   </td>
-                  <td className="p-2 text-sm font-poppins font-normal text-gray-500 w-[100%]">
+                  <td className="p-2 text-xs lg:text-sm font-poppins font-normal text-gray-500 w-[100%]">
                     {user.email}
                   </td>
                   <td
-                    className={`py-1 px-5 bg-[#F74821] bg-opacity-10 rounded-full flex justify-center w-[100%] ${
+                    className={`py-1 px-2 text-xs lg:px-5 lg:text-sm bg-[#F74821] bg-opacity-10 rounded-full flex justify-center w-[100%] ${
                       user.payment === "Paid" ? "text-[#F74821]" : "text-[#F74821]"
                     }`}
                   >
                     {user.payment}
                   </td>
-                  <td className="w-[10%] pl-10 relative">
+                  <td className="w-[10%] pl-2 lg:pl-10 relative">
                     <HiDotsVertical onClick={() => toggleDropdown(index)} className="cursor-pointer" />
                     {dropdownIndex === index && <Dropdown onClose={() => setDropdownIndex(null)} />}
                   </td>
@@ -226,7 +229,7 @@ const UserTable = () => {
           </table>
         </div>
       </div>
-      <div className="w-[25%]">
+      <div className="w-full lg:w-[25%] mt-4 lg:mt-0">
         <UserGraph />
       </div>
     </div>

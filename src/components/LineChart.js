@@ -17,18 +17,9 @@ const LineChart = () => {
   // Months with years as labels for the x-axis
   const data = {
     labels: [
-      'Jan 2023',
-      'Feb 2023',
-      'Mar 2023',
-      'Apr 2023',
-      'May 2023',
-      'Jun 2023',
-      'Jul 2023',
-      'Aug 2023',
-      'Sep 2023',
-      'Oct 2023',
-      'Nov 2023',
-      'Dec 2023',
+      'Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023',
+      'May 2023', 'Jun 2023', 'Jul 2023', 'Aug 2023',
+      'Sep 2023', 'Oct 2023', 'Nov 2023', 'Dec 2023',
     ],
     datasets: [
       {
@@ -44,36 +35,28 @@ const LineChart = () => {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: false, // Disable aspect ratio to allow flexible height/width
     plugins: {
-      legend: {
-        display: false, // Hide the legend
-      },
+      legend: { display: false }, // Hide the legend
     },
     scales: {
       x: {
-        title: {
-          display: false, // Hide x-axis title
-        },
+        title: { display: false }, // Hide x-axis title
       },
       y: {
         beginAtZero: true,
         min: 0, // Set minimum value of y-axis to 0
         max: 100, // Set maximum value of y-axis to 100
-        title: {
-          display: false, // Hide y-axis title
-        },
-        ticks: {
-          stepSize: 10, // Adjust to control the y-axis intervals
-        },
+        title: { display: false }, // Hide y-axis title
+        ticks: { stepSize: 10 }, // Adjust to control the y-axis intervals
       },
     },
   };
 
   return (
-    <div className="bg-white px-6 rounded-lg justify-center items-center">
-      <div style={{ height: '200px', width: '100%' }}> {/* Set a fixed height and width greater than 100% for the chart */}
-        <Line data={data} options={options}  />
+    <div className="bg-white px-4 sm:px-6 rounded-lg">
+      <div className="h-48 sm:h-60 md:h-80 lg:h-96 w-full"> {/* Adjust height for different screen sizes */}
+        <Line data={data} options={options} />
       </div>
     </div>
   );
