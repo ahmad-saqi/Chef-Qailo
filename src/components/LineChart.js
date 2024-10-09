@@ -55,7 +55,7 @@ const LineChart = () => {
 
   return (
     <div className="bg-white px-4 sm:px-6 rounded-lg">
-      <div className="h-48 sm:h-60 md:h-80 lg:h-96 w-full"> {/* Adjust height for different screen sizes */}
+      <div className="h-48 sm:h-60 md:h-48 lg:h-48 w-full"> {/* Adjust height for different screen sizes */}
         <Line data={data} options={options} />
       </div>
     </div>

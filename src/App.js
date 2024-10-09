@@ -5,7 +5,7 @@ import ResetPassword from "./components/RestPassword"; // Adjust the path as nec
 import ForgotPassword from "./components/ForgotPassword"; // Adjust the path as necessary
 import VerificationCode from "./components/VerificationCode"; 
 import Dashboard from "./pages/Dashboard"; // Adjust the path as necessary
-
+import UserList from "./pages/UserList";
 const App = () => {
   return (
     <Router>
@@ -15,6 +15,7 @@ const App = () => {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/verification" element={<VerificationCode />} /> */}
         <Route path="/" element={<Dashboard />} />
+        <Route path="/users" element={<UserList />} />
       </Routes>
     </Router>
   );

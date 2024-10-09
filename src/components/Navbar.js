@@ -3,7 +3,7 @@ import login2 from "../images/login2.svg";
 import Category from "../images/Category.svg";
 import profile from "../images/profile.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import hamburger and close icons
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage navbar visibility
 
@@ -28,18 +28,28 @@ const Navbar = () => {
       <div className={`flex-1 overflow-y-auto p-6 ${isOpen ? 'block' : 'hidden md:block'}`}>
         <nav>
           <ul className="space-y-4">
-            <li className="text-gray-500 hover:text-orange-500 flex items-center space-x-2">
-              <i className="fas fa-th-large">
+            <Link to="/" 
+            
+            >
+              <button type="button" className="flex items-center">
+          
                 <img src={Category} className="p-2 rounded" alt="Dashboard Icon" />
-              </i>
-              <span>Dashboard</span>
-            </li>
-            <li className="text-gray-500 hover:text-orange-500 flex items-center space-x-2">
-              <i className="fas fa-users">
+              
+              Dashboard
+           </button>
+            </Link>
+            <Link to="/users"
+            
+            >
+            
+              <button type="button" className="flex items-center">
                 <img src={profile} className="p-2 rounded" alt="Users Icon" />
-              </i>
-              <span>Users List</span>
-            </li>
+                Users List
+              </button>
+              <span></span>
+            
+            </Link>
+            
           </ul>
         </nav>
       </div>

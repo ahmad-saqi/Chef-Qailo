@@ -15,13 +15,13 @@ const data = [
 
 const UserGraph = () => {
   return (
-    <div className="bg-[#F74821] rounded-xl py-6 px-4 text-white shadow-lg">
+    <div className="bg-[#F74821] rounded-xl pt-6 pb-10 px-4 text-white shadow-lg">
       {/* Header */}
       <div className="text-2xl font-poppins font-semibold mb-2">3,240</div>
       <div className="text-md font-poppins font-normal mb-4">Users This Month</div>
 
       {/* Responsive Area Chart */}
-      <ResponsiveContainer width="100%" height={150}>
+      <ResponsiveContainer width="100%" height={140}>
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
@@ -39,7 +39,17 @@ const UserGraph = () => {
             fillOpacity={1}
             fill="url(#colorUsers)"
           />
+          <p>sd</p>
         </AreaChart>
+        <div className="flex justify-between items-start pb-4">
+          <p>M</p>
+          <p>T</p>
+          <p>W</p>
+          <p>T</p>
+          <p>F</p>
+          <p>S</p>
+          <p>S</p>
+        </div>
       </ResponsiveContainer>
     </div>
   );
