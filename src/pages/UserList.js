@@ -8,12 +8,12 @@ import UserInfo from "../components/UserInfo";
 
 const UserList = () => {
   return (
-    <div className="flex flex-col md:flex-row ">
+    <div className="flex flex-col md:flex-row  ">
       {/* Navbar */}
       <Navbar />
 
-      <div className="flex flex-col md:flex-row flex-grow px-4  bg-gray-100 w-[100%] ">
-        <div className="md:w-[75%] md:pr-9 md:pl-6">
+      <div className="flex flex-col md:flex-row flex-grow px-4  bg-gray-100 w-[72%] ">
+        <div className="md:w-[75%] md:pr-7 md:pl-3">
           {/* Statistics */}
           <HeaderUserList />
 
