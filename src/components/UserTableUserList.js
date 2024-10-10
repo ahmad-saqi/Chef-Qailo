@@ -38,7 +38,7 @@ const UserTableUserList = () => {
   return (
     <div className=" flex flex-col lg:flex-row mt-2">
       <div className="w-full lg:w-[100%]  ">
-        <div style={{ height: "80vh" }}  className="overflow-y-scroll scrollbar-hide">
+        <div   className="h-[calc(100vh--30px)] overflow-y-scroll scrollbar-hide">
           <table className="w-full table-auto p-6">
             <thead className="bg-gray-100 sticky top-[-2px] py-6 w-full z-10   ">
               <tr className="text-center w-[100%] border-b-2  flex py-4">

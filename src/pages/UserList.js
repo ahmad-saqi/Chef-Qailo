@@ -12,8 +12,8 @@ const UserList = () => {
       {/* Navbar */}
       <Navbar />
 
-      <div className="flex flex-col md:flex-row flex-grow px-4 md:space-x-4  bg-gray-100 w-[100%] ">
-        <div className="md:w-[75%]">
+      <div className="flex flex-col md:flex-row flex-grow px-4  bg-gray-100 w-[100%] ">
+        <div className="md:w-[75%] md:pr-9 md:pl-6">
           {/* Statistics */}
           <HeaderUserList />
 
