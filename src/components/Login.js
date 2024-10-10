@@ -4,8 +4,7 @@ import login2 from "../images/login2.svg";
 import sms from "../images/sms-edit.svg";
 import lock from "../images/lock.svg";
 import line from "../images/line.svg";
-import eyeOpen from "../images/eye-open.svg"; // Eye open icon
-import eyeClosed from "../images/eye-closed.svg"; // Eye closed icon
+
 import { Link } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";

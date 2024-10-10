@@ -9,9 +9,9 @@ const Dashboard = () => {
   return (
     <div className="flex flex-col md:flex-row">
       {/* Navbar */}
-      <Navbar />
+      <Navbar className="md:w-[18%]" />
 
-      <div className="flex-grow p-4 md:p-6 bg-gray-100">
+      <div className="flex-grow p-4 md:p-6 bg-gray-100 w-[82%]">
         {/* Header */}
         <Header />
 
