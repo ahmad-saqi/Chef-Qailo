@@ -1,32 +1,22 @@
 import React from "react";
-import Product from "../src/images/Product.png";
-import Product1 from "./images/Product-1.png";
-import Product2 from "./images/Product-2.png";
-import Product3 from "./images/Product-3.png";
-
-import Product5 from "./images/Product-5.png";
-import Product6 from "./images/Product-6.png";
-import Product7 from "./images/Product-7.png";
-import Product8 from "./images/Product-8.png";
-import Product9 from "./images/Product-9.png";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login"; // Adjust the path as necessary
+import ResetPassword from "./components/RestPassword"; // Adjust the path as necessary
+import ForgotPassword from "./components/ForgotPassword"; // Adjust the path as necessary
+import VerificationCode from "./components/VerificationCode"; 
+import Dashboard from "./pages/Dashboard"; // Adjust the path as necessary
 
 const App = () => {
   return (
-    <>
-      <div className="flex flex-wrap">
-        <img src={Product} alt="logo"  className="h-36"/>
-        <img src={Product1} alt="logo" className="h-36"/>
-        <img src={Product2} alt="logo" className=""/>
-        <img src={Product3} alt="logo" className="h-36"/>
-         
-        <img src={Product5} alt="logo" className="h-36"/>
-        <img src={Product6} alt="logo" className="h-36"/>
-        <img src={Product7} alt="logo" className="h-36" />
-        <img src={Product8} alt="logo" className="h-36" />
-        <img src={Product9} alt="logo"  className="h-36"/>
-      
-      </div>
-    </>
+    <Router>
+      <Routes>
+        {/* <Route path="/" element={<Login />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/verification" element={<VerificationCode />} /> */}
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 };
 
