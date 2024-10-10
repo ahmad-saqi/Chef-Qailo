@@ -3,231 +3,7 @@ import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 import UserGraph from "./UserGraph";
 import { HiDotsHorizontal, HiDotsVertical } from "react-icons/hi";
 import Dropdown from "./Dropdown"; // Import your Dropdown component
-
-const users = [
-  {
-    name: "John Deo",
-    email: "johndoe2211@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Shelby Goode",
-    email: "shelbygoode481@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Robert Bacins",
-    email: "robertbacins4182@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Jane Smith",
-    email: "janesmith123@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Mark Johnson",
-    email: "markjohnson82@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Emily Davis",
-    email: "emilydavis78@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Michael Green",
-    email: "michaelgreen51@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Chris Brown",
-    email: "chrisbrown@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Sarah Miller",
-    email: "sarahmiller82@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "David Wilson",
-    email: "davidwilson@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Sophia Anderson",
-    email: "sophia.anderson@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "James Martin",
-    email: "james.martin@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Olivia Garcia",
-    email: "olivia.garcia@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Henry Scott",
-    email: "henry.scott@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Mia Clark",
-    email: "mia.clark@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Ethan Lewis",
-    email: "ethan.lewis@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Liam Walker",
-    email: "liam.walker@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Isabella Hall",
-    email: "isabella.hall@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Noah Allen",
-    email: "noah.allen@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Ava Young",
-    email: "ava.young@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Jane Smith",
-    email: "janesmith123@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Mark Johnson",
-    email: "markjohnson82@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Emily Davis",
-    email: "emilydavis78@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Michael Green",
-    email: "michaelgreen51@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Chris Brown",
-    email: "chrisbrown@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Sarah Miller",
-    email: "sarahmiller82@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "David Wilson",
-    email: "davidwilson@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Sophia Anderson",
-    email: "sophia.anderson@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "James Martin",
-    email: "james.martin@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Olivia Garcia",
-    email: "olivia.garcia@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Henry Scott",
-    email: "henry.scott@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Mia Clark",
-    email: "mia.clark@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Ethan Lewis",
-    email: "ethan.lewis@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Liam Walker",
-    email: "liam.walker@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Isabella Hall",
-    email: "isabella.hall@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Noah Allen",
-    email: "noah.allen@gmail.com",
-    payment: "Unpaid",
-    image: "https://via.placeholder.com/30",
-  },
-  {
-    name: "Ava Young",
-    email: "ava.young@gmail.com",
-    payment: "Paid",
-    image: "https://via.placeholder.com/30",
-  }
-];
+import users from '../users/users.json'
 
 
 const UserTableUserList = () => {
@@ -261,12 +37,12 @@ const UserTableUserList = () => {
 
   return (
     <div className=" flex flex-col lg:flex-row mt-2">
-      <div className="w-full lg:w-[75%]  ">
+      <div className="w-full lg:w-[100%]  ">
         <div style={{ height: "80vh" }}  className="overflow-y-scroll scrollbar-hide">
           <table className="w-full table-auto p-6">
             <thead className="bg-gray-100 sticky top-[-2px] py-6 w-full z-10   ">
               <tr className="text-center w-[100%] border-b-2  flex py-4">
-                <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[35%]">
+                <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[30%] md:w-[35%]">
                   <div className="flex items-center cursor-pointer justify-start" onClick={() => handleSort("name")}>
                     Name
                     {sortConfig.key === "name" &&
@@ -278,7 +54,7 @@ const UserTableUserList = () => {
                   </div>
                 </th>
                 <th className="p-2 text-xs lg:text-sm font-normal font-poppins w-[40%]">
-                  <div className="flex items-center cursor-pointer justify-start" onClick={() => handleSort("email")}>
+                  <div className="hidden md:flex items-center cursor-pointer justify-start" onClick={() => handleSort("email")}>
                     Email
                     {sortConfig.key === "email" &&
                       (sortConfig.direction === "asc" ? (
@@ -307,11 +83,11 @@ const UserTableUserList = () => {
             <tbody className="w-full bg-gray-100  ">
               {sortedUsers.slice(0, 30).map((user, index) => (
                 <tr key={index} className=" bg-white mb-2 rounded-lg flex items-center border-2">
-                  <td className="p-2 flex items-center text-xs lg:text-sm font-poppins font-normal w-[35%]">
+                  <td className="p-2 flex items-center text-xs lg:text-sm font-poppins font-normal w-[70%] md:w-[35%]">
                     <img src={user.image} alt={user.name} className="w-8 h-8 rounded-full mr-2" />
                     {user.name}
                   </td>
-                  <td className="p-2 text-xs lg:text-sm font-poppins font-normal text-gray-500 w-[40%]">
+                  <td className="hidden md:flex items-center p-2 text-xs lg:text-sm font-poppins font-normal text-gray-500 w-[40%]">
                     {user.email}
                   </td>
                   <td

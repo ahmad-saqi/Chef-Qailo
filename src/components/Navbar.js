@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="md:w-[18%] w-full md:h-screen md:sticky top-0 bg-white flex justify-between items-start md:flex-col  z-20">
+    <div className="md:w-[18%] w-full md:h-screen sticky top-0 bg-white flex justify-between items-start md:flex-col  z-20">
       {/* Logo section */}
       <div className="p-4 flex justify-between items-center">
         <div className="hidden md:block">
